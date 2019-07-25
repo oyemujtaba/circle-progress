@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .progress-bar1 {
+            position: relative;
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        .progress-bar1 div {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .progress-bar1 div span {
+            position: absolute;
+            font-family: Arial;
+            font-size: 25px;
+            line-height: 75px;
+            height: 75px;
+            width: 75px;
+            left: 12.5px;
+            top: 12.5px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .progress-bar1 .background {
+            background-color: #b3cef6;
+        }
+
+        .progress-bar1 .rotate {
+            clip: rect(0 50px 100px 0);
+            background-color: #4b86db;
+        }
+
+        .progress-bar1 .left {
+            clip: rect(0 50px 100px 0);
+            opacity: 1;
+            background-color: #b3cef6;
+        }
+
+        .progress-bar1 .right {
+            clip: rect(0 50px 100px 0);
+            transform: rotate(180deg);
+            opacity: 0;
+            background-color: #4b86db;
+        }
+
+        @keyframes toggle {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <div class="container">
+            <div class="row">
+                    <div class="col-md-4">
+                            <div class="progress-bar1" data-percent="60" data-duration="1000" data-color="#ccc,yellow"></div>
+                        </div>
+                    <div class="col-md-4">
+                            <div class="progress-bar1" data-percent="70" data-duration="1000" data-color="#ccc,red"></div>
+                        </div>
+                    <div class="col-md-4">
+                            <div class="progress-bar1" data-percent="40" data-duration="1000" data-color="#ccc,green"></div>
+                        </div>
+                </div>
+            </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="./jQuery-plugin-progressbar.js"></script>
+    <script>
+        $(".progress-bar1").loading();
+
+    </script>
+</body>
+
+</html>
